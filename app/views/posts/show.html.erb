@@ -1,9 +1,16 @@
 <%- model_class = Post -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => @post.title.titleize %></h1>
+  <h1 style="text-align: center;"><%=t '.title', :default => @post.title.titleize %></h1>
 </div>
 
-<%= @post.content %>
+<% if @post.avatar? %>
+	<br>
+	<div style="text-align: center;"><%= image_tag @post.avatar.url(:cover) %></div>
+	<br>
+<% end %>
+
+<%= simple_format(@post.content) %>
+
 <br>
 <br>
 <strong>Key-words: <%= @post.key_words %></strong>

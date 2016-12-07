@@ -29,9 +29,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+#BOotstrap
 gem 'twitter-bootstrap-rails'
+#CSS FRamework
 gem 'less-rails'
+
+#gem de upload de arquivos
+gem 'paperclip', '~> 5.0.0'
 
 group :production do
   #postgres database gem
